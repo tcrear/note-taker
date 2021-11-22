@@ -1,0 +1,14 @@
+[
+    {
+        "title":"Grocery List",
+        "text":"Chicken\nRice\nBrusselSprouts\nBacon"
+    },
+    {
+        "title":"Household Chores",
+        "text":"Vaccum\nDishes\nBathroomFloor"
+    },
+    {
+        "title":"Pets",
+        "text":"Clean Litterbox\nWash Food Mats\nMove Scratcher"
+    }
+]
