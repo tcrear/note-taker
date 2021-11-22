@@ -1,14 +1,13 @@
-const notes = require('express').Router();
+const router = require('express').Router();
 const fs = require('fs');
 const util = require('util');
-
 const { v4: uuidv4 } = require('uuid');
 
-db.get('/notes', (req, res) => {
+router.get('/notes', (req, res) => {
   util.promisify(fs.readFile)('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
-db.get('/notes/:note_id', (req, res) => {
+router.get('/notes/:note_id', (req, res) => {
   const noteId = req.params.note_id
   util.promisify(fs.readFile)('./db/db.json').then((data) => JSON.parse(data))
   .then((json) => {
@@ -19,7 +18,7 @@ db.get('/notes/:note_id', (req, res) => {
   });
 });
 
-db.post('/notes', (req, res) => {
+router.post('/notes', (req, res) => {
  console.info(`${req.method} add note`);
   const { title, text } = req.body;
   if (title && text) {
@@ -60,4 +59,4 @@ db.post('/notes', (req, res) => {
   }
 });
 
-module.exports = db;
+module.exports = router;
