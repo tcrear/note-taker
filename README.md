@@ -7,7 +7,8 @@ The motivation of the project was to modify starter code to create an applicatio
 
 ## Deloyed Site Screenshot
 
-![image](  )
+![image](https://github.com/tcrear/note-taker/blob/main/assets/Capture-1.JPG)
+![image](https://github.com/tcrear/note-taker/blob/main/assets/Capture-2.JPG)
 
 
 ## Link to Deployed Site
