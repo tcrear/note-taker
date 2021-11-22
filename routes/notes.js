@@ -1,8 +1,8 @@
+const notes = require('express').Router();
 const fs = require('fs');
 const util = require('util');
 
 const { v4: uuidv4 } = require('uuid');
-const db = require('express').Router();
 
 db.get('/notes', (req, res) => {
   util.promisify(fs.readFile)('./db/db.json').then((data) => res.json(JSON.parse(data)));
@@ -34,7 +34,6 @@ db.post('/notes', (req, res) => {
         console.error(err);
       } else {
         const allTheNotes = JSON.parse(data) || [];
-        console.log('----------', allTheNotes);
 
         allTheNotes.push(newNote);
       
